@@ -1,21 +1,17 @@
 
-module Arithmetic
+type Arithmetic() =
 
-// Қосу
-let add a b =
-    a + b
+    member this.Add(a: int, b: int) =
+        a + b
 
-// Азайту
-let subtract a b =
-    a - b
+    member this.Subtract(a: int, b: int) =
+        a - b
 
-// Көбейту
-let multiply a b =
-    a * b
+    member this.Multiply(a: int, b: int) =
+        a * b
 
-// Бөлу
-let divide a b =
-    if b = 0 then
-        failwith "Нөлге бөлуге болмайды!"
-    else
-        a / b
+    member this.Divide(a: int, b: int) =
+        if b = 0 then
+            failwith "Нөлге бөлуге болмайды"
+        else
+            a / b
