@@ -1,17 +1,25 @@
 
-type Arithmetic() =
+function sum(a, b) {
+    return a + b;
+}
 
-    member this.Add(a: int, b: int) =
-        a + b
+function subtract(a, b) {
+    return a - b;
+}
 
-    member this.Subtract(a: int, b: int) =
-        a - b
+function multiply(a, b) {
+    return a * b;
+}
 
-    member this.Multiply(a: int, b: int) =
-        a * b
+function divide(a, b) {
+    if (b === 0) {
+        throw new Error("Нөлге бөлуге болмайды!");
+    }
+    return a / b;
+}
 
-    member this.Divide(a: int, b: int) =
-        if b = 0 then
-            failwith "Нөлге бөлуге болмайды"
-        else
-            a / b
+// Тексеру
+console.log("Қосу:", sum(10, 5));
+console.log("Азайту:", subtract(10, 5));
+console.log("Көбейту:", multiply(10, 5));
+console.log("Бөлу:", divide(10, 5));
